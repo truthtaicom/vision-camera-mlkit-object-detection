@@ -19,8 +19,8 @@ export interface DetectedObject {
  * Returns an array of matching `DetectedObject`s for the given frame.
  *
  */
-export function detectObject(frame: Frame): DetectedObject[] {
+export function mlDetectObject(frame: Frame): DetectedObject[] {
   'worklet';
   // @ts-expect-error Frame Processors are not typed.
-  return __detectObject(frame);
+  return __mlDetectObject(frame);
 }

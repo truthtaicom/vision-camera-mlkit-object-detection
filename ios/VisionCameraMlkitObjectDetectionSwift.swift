@@ -3,8 +3,8 @@ import AVFoundation
 import MLKitVision
 import MLKitObjectDetection
 
-@objc(ObjectDetectionFrameProcessorPlugin)
-public class ObjectDetectionFrameProcessorPlugin: NSObject, FrameProcessorPluginBase {
+@objc(VisionCameraMlkitObjectDetectionSwift)
+public class VisionCameraMlkitObjectDetectionSwift: NSObject, FrameProcessorPluginBase {
     private static func getFrame(_ frameRect: CGRect) -> [String: CGFloat] {
 
         let offsetX = (frameRect.midX - ceil(frameRect.width)) / 2.0
