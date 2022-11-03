@@ -18,9 +18,9 @@ export interface DetectedObject {
  * Returns an array of matching `DetectedObject`s for the given frame.
  *
  */
-export function mlDetectObject(frame: Frame): DetectedObject[] {
+export function detectObjects(frame: Frame): DetectedObject[] {
   'worklet';
   // @ts-ignore
   // eslint-disable-next-line no-undef
-  return __mlDetectObject(frame);
+  return __detectObjects(frame);
 }

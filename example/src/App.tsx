@@ -8,7 +8,7 @@ import {
 } from 'react-native-vision-camera';
 import {
   DetectedObject,
-  detectObject,
+  mlDetectObject,
 } from 'vision-camera-mlkit-object-detection';
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
   const frameProcessor = useFrameProcessor(
     (frame) => {
       'worklet';
-      const objects: DetectedObject[] = detectObject(frame);
+      const objects: DetectedObject[] = mlDetectObject(frame);
       // const labels = detectObject(frame);
 
       console.log('Object:', objects[0]);
