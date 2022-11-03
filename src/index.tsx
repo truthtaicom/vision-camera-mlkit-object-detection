@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import type { Frame } from 'react-native-vision-camera';
 
 export interface DetectedObject {
@@ -21,6 +20,7 @@ export interface DetectedObject {
  */
 export function mlDetectObject(frame: Frame): DetectedObject[] {
   'worklet';
-  // @ts-expect-error Frame Processors are not typed.
+  // @ts-ignore
+  // eslint-disable-next-line no-undef
   return __mlDetectObject(frame);
 }
