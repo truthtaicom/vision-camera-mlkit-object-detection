@@ -1,4 +1,4 @@
-/* globals __detectObject */
+/* eslint-disable no-undef */
 import type { Frame } from 'react-native-vision-camera';
 
 export interface DetectedObject {
